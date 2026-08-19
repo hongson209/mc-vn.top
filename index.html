@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07110b">
+  <meta name="description" content="MC-VN.top — giới thiệu dịch vụ subdomain Minecraft miễn phí bởi Kotoba Studio.">
+  <title>MC-VN • Minecraft Free Domain</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/mcvn-icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pixelify+Sans:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="mouse-glow" id="mouseGlow"></div>
+
+  <div class="page-noise"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <audio id="bgMusic" preload="auto"></audio>
+
+  <header class="topbar shell">
+    <a class="brand magnetic" href="#home" aria-label="MC-VN">
+      <span class="brand-logo" aria-hidden="true">
+        <img src="./assets/mcvn-icon.svg" alt="">
+      </span>
+      <span class="brand-copy">
+        <strong>MC-VN</strong>
+        <small>FREE MINECRAFT DOMAIN</small>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#service">Dịch vụ</a>
+      <a href="#guide">Hướng dẫn</a>
+      <a href="#limits">Giới hạn</a>
+      <a href="https://dsc.gg/k-studio" target="_blank" rel="noopener">Discord</a>
+    </nav>
+
+    <button class="music-pill magnetic" id="musicToggle" type="button" aria-label="Bật hoặc tắt nhạc">
+      <span class="equalizer" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
+      <span id="musicStatus">AUTO MUSIC</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow reveal">
+          <span class="live-dot"></span>
+          <span>Giới thiệu dịch vụ • Miễn phí • Minecraft vibe</span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1">
+          Domain đẹp hơn<br>
+          cho <span class="gradient-text">server Minecraft.</span>
+        </h1>
+
+        <p class="hero-text reveal reveal-delay-2">
+          MC-VN cung cấp <strong>subdomain Minecraft miễn phí</strong> dạng
+          <strong>tenban.mc-vn.top</strong>. Bạn đăng ký trực tiếp bằng bot Discord với
+          <strong>/register</strong>, sau đó domain sẽ được cấu hình để trỏ tới server của bạn.
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a class="primary-btn magnetic shimmer" id="ctaMain" href="https://dsc.gg/k-studio" target="_blank" rel="noopener">
+            <span>Tạo tên miền miễn phí</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+
+          <a class="ghost-btn magnetic" href="#samples">
+            Xem mẫu thành phẩm
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div class="trust-row reveal reveal-delay-4">
+          <div class="trust-chip"><span class="mini-icon">✦</span><span><b>Miễn phí</b> cho Minecraft server</span></div>
+          <div class="trust-chip"><span class="mini-icon">◆</span><span><b>3 / 5 / 10</b> domain theo Rank</span></div>
+          <div class="trust-chip"><span class="mini-icon">⌁</span><span>Quản lý bằng <b>Discord bot</b></span></div>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal reveal-delay-2" id="heroStage">
+        <div class="stage-grid"></div>
+
+        <div class="game-art art-main tilt-card">
+          <img src="./assets/images/sunrise.webp" alt="Minecraft sunrise by the pond">
+          <div class="art-overlay"></div>
+          <div class="art-top">
+            <span class="pixel-label">MC-VN REGISTER /REGISTER</span>
+            <span class="online-badge"><i></i> FREE SERVICE</span>
+          </div>
+
+          <div class="hero-domain-card">
+            <div class="domain-icon">MC</div>
+            <div>
+              <small>DOMAIN CỦA BẠN</small>
+              <strong>play.mc-vn.top</strong>
+            </div>
+            <span class="signal"><i></i><i></i><i></i></span>
+          </div>
+        </div>
+
+        <div class="float-card float-right tilt-card">
+          <img src="./assets/images/cherry.webp" alt="Minecraft cherry blossom wallpaper">
+          <div class="float-card-copy">
+            <span>JAVA + BEDROCK</span>
+            <b>server.mc-vn.top</b>
+          </div>
+        </div>
+
+        <div class="float-card float-left tilt-card">
+          <img src="./assets/images/forest.webp" alt="Minecraft magical forest village">
+          <div class="float-card-copy">
+            <span>QUẢN LÝ BẰNG BOT</span>
+            <b>/domain</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-wrap">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>FREE MINECRAFT DOMAIN</span><i>◆</i>
+          <span>REGISTER /REGISTER</span><i>◆</i>
+          <span>MC-VN.TOP</span><i>◆</i>
+          <span>JAVA + BEDROCK</span><i>◆</i>
+          <span>3 / 5 / 10 DOMAINS</span><i>◆</i>
+          <span>KOTOBA STUDIO</span><i>◆</i>
+          <span>FREE MINECRAFT DOMAIN</span><i>◆</i>
+          <span>REGISTER /REGISTER</span><i>◆</i>
+          <span>MC-VN.TOP</span><i>◆</i>
+          <span>JAVA + BEDROCK</span><i>◆</i>
+          <span>3 / 5 / 10 DOMAINS</span><i>◆</i>
+          <span>KOTOBA STUDIO</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="service-section shell" id="service">
+      <div class="section-heading">
+        <div>
+          <span class="pixel-kicker">FREE DOMAIN SERVICE</span>
+          <h2>MC-VN cấp tên miền Minecraft miễn phí.<br><span>Dùng thật, quản lý thật.</span></h2>
+        </div>
+        <p>
+          Đây không phải trang demo hay bộ mẫu giao diện. MC-VN là dịch vụ cấp subdomain miễn phí
+          để bạn sử dụng cho Minecraft server của mình.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card service-main">
+          <span class="service-number">01</span>
+          <div class="service-icon">MC</div>
+          <small>ĐỊA CHỈ NHẬN ĐƯỢC</small>
+          <strong>konomi.mc-vn.top</strong>
+          <p>
+            Thay vì chia sẻ IP dài, bạn có một địa chỉ ngắn gọn thuộc
+            <b>mc-vn.top</b> để người chơi sử dụng.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <div class="service-symbol">⌁</div>
+          <small>TRỎ TỚI SERVER</small>
+          <h3>IP hoặc Host</h3>
+          <p>
+            Bot nhận IP hoặc hostname của máy chủ, kèm port khi cần,
+            sau đó kiểm tra thông tin trước khi bạn xác nhận.
+          </p>
+          <div class="service-code">
+            <code>123.45.67.89:25570</code>
+            <code>play.hostcuaban.com</code>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <div class="service-symbol">◆</div>
+          <small>JAVA / BEDROCK</small>
+          <h3>Hỗ trợ port riêng</h3>
+          <p>
+            Java Port có thể tự nhận diện trong nhiều trường hợp.
+            Bedrock / Geyser Port chỉ cần nhập khi server của bạn có hỗ trợ.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">04</span>
+          <div class="service-symbol">✓</div>
+          <small>QUẢN LÝ</small>
+          <h3>Domain thuộc về bạn</h3>
+          <p>
+            Người đã đăng ký mới có quyền sửa hoặc xóa tên miền.
+            Toàn bộ quản lý thực hiện qua <b>/tenmien</b> hoặc <b>/domain</b>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section shell" id="guide">
+      <div class="section-heading">
+        <div>
+          <span class="pixel-kicker">BOT GUIDE</span>
+          <h2>Tạo domain bằng bot.<br><span>Nhanh, rõ và dễ quản lý.</span></h2>
+        </div>
+        <p>
+          Đăng ký tên miền thật được thực hiện trực tiếp bằng bot Discord của Kotoba Studio.
+        </p>
+      </div>
+
+      <div class="guide-layout">
+        <article class="guide-card guide-main">
+          <div class="guide-card-top">
+            <span class="guide-step">01</span>
+            <div>
+              <small>BẮT ĐẦU</small>
+              <h3>Dùng lệnh <code>/register</code></h3>
+            </div>
+          </div>
+
+          <div class="guide-flow">
+            <div class="flow-item">
+              <span class="flow-index">01</span>
+              <div>
+                <b>Tên miền</b>
+                <p>Nhập tên ngắn bạn muốn sử dụng.</p>
+                <code>konomi</code>
+              </div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-item">
+              <span class="flow-index">02</span>
+              <div>
+                <b>Địa chỉ máy chủ</b>
+                <p>Có thể dùng IP hoặc hostname, có hoặc không có port.</p>
+                <div class="code-stack">
+                  <code>123.45.67.89</code>
+                  <code>123.45.67.89:25570</code>
+                  <code>play.hostcuaban.com</code>
+                  <code>play.hostcuaban.com:25570</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-item">
+              <span class="flow-index">03</span>
+              <div>
+                <b>Java Port</b>
+                <p>Có thể để trống nếu địa chỉ phía trên đã có port hoặc bot tự nhận diện được.</p>
+              </div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-item">
+              <span class="flow-index">04</span>
+              <div>
+                <b>Bedrock / Geyser Port</b>
+                <p>Chỉ nhập nếu server có hỗ trợ Bedrock hoặc Geyser.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="verify-banner">
+            <span class="verify-icon">✓</span>
+            <div>
+              <b>Bot kiểm tra máy chủ trước</b>
+              <p>Bot sẽ kiểm tra server, hiện thông tin để bạn xem lại và chỉ hoàn tất sau khi bạn xác nhận.</p>
+            </div>
+          </div>
+
+          <div class="result-card">
+            <small>THÀNH PHẨM</small>
+            <strong>konomi.mc-vn.top</strong>
+            <span>sẽ trỏ tới Minecraft server của bạn.</span>
+          </div>
+        </article>
+
+        <div class="guide-side">
+          <article class="guide-card">
+            <div class="guide-card-top">
+              <span class="guide-step">02</span>
+              <div>
+                <small>QUẢN LÝ</small>
+                <h3><code>/tenmien</code> hoặc <code>/domain</code></h3>
+              </div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span>◆</span>Xem các tên miền đang sở hữu</li>
+              <li><span>◆</span>Tạo thêm tên miền</li>
+              <li><span>◆</span>Sửa IP / Host</li>
+              <li><span>◆</span>Sửa Java Port</li>
+              <li><span>◆</span>Sửa Bedrock Port</li>
+              <li><span>◆</span>Xóa tên miền</li>
+              <li><span>◆</span>Kiểm tra trạng thái</li>
+            </ul>
+          </article>
+
+          <article class="guide-card commands-card">
+            <div class="guide-card-top">
+              <span class="guide-step">03</span>
+              <div>
+                <small>LỆNH NHANH</small>
+                <h3>Nhớ vài lệnh là đủ.</h3>
+              </div>
+            </div>
+
+            <div class="command-list">
+              <div><code>/register</code><span>Đăng ký mới</span></div>
+              <div><code>/tenmien</code><span>Trung tâm quản lý</span></div>
+              <div><code>/domain</code><span>Trung tâm quản lý</span></div>
+              <div><code>/edit-tenmien</code><span>Sửa tên miền</span></div>
+              <div><code>/xoa-tenmien</code><span>Xóa tên miền</span></div>
+              <div><code>/help-tenmien</code><span>Xem hướng dẫn</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="limits-section shell" id="limits">
+      <div class="section-heading compact">
+        <div>
+          <span class="pixel-kicker">RANK LIMITS</span>
+          <h2>Giới hạn theo Rank.<br><span>Rank cao hơn, tạo được nhiều hơn.</span></h2>
+        </div>
+        <p>Nếu có nhiều Rank, hệ thống tự sử dụng mức giới hạn cao nhất.</p>
+      </div>
+
+      <div class="limit-grid">
+        <article class="limit-card">
+          <span class="limit-tag">MEMBER</span>
+          <strong>3</strong>
+          <p>tên miền tối đa</p>
+        </article>
+
+        <article class="limit-card featured">
+          <span class="limit-tag">RANK NÂNG CẤP</span>
+          <strong>5</strong>
+          <p>tên miền tối đa</p>
+        </article>
+
+        <article class="limit-card premium">
+          <span class="limit-tag">RANK CAO NHẤT</span>
+          <strong>10</strong>
+          <p>tên miền tối đa</p>
+        </article>
+      </div>
+
+      <div class="ownership-note">
+        <span class="ownership-icon">⌁</span>
+        <div>
+          <b>Quyền sở hữu được tách riêng theo người đăng ký.</b>
+          <p>Mỗi tên miền chỉ thuộc quyền quản lý của người đã đăng ký. Người khác không thể sửa hoặc xóa tên miền của bạn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-section shell" id="result">
+      <div class="section-heading">
+        <div>
+          <span class="pixel-kicker">WHAT YOU GET</span>
+          <h2>Sau khi đăng ký xong.<br><span>Bạn có domain dùng cho server thật.</span></h2>
+        </div>
+        <p>
+          Ví dụ: đăng ký tên <b>konomi</b> thì địa chỉ nhận được là
+          <b>konomi.mc-vn.top</b> và được cấu hình theo server bạn đã khai báo.
+        </p>
+      </div>
+
+      <div class="result-showcase tilt-card">
+        <img src="./assets/images/sunrise.webp" alt="Minecraft server domain">
+        <div class="result-showcase-overlay"></div>
+
+        <div class="result-showcase-top">
+          <span>MC-VN FREE DOMAIN</span>
+          <span class="result-status"><i></i> ACTIVE</span>
+        </div>
+
+        <div class="result-showcase-main">
+          <small>YOUR MINECRAFT ADDRESS</small>
+          <strong>konomi.mc-vn.top</strong>
+          <p>Địa chỉ gọn hơn để dùng cho server và chia sẻ với người chơi.</p>
+        </div>
+      </div>
+
+      <div class="fact-grid">
+        <article>
+          <span>01</span>
+          <b>Miễn phí</b>
+          <p>Không phải mua một domain riêng để có địa chỉ Minecraft ngắn gọn.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <b>Quản lý được</b>
+          <p>Sửa IP/host, Java Port, Bedrock Port, kiểm tra trạng thái hoặc xóa domain.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <b>Có giới hạn rõ ràng</b>
+          <p>Member tối đa 3, Rank nâng cấp 5 và Rank cao nhất 10 tên miền.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery-section shell" id="gallery">
+      <div class="section-heading compact">
+        <div>
+          <span class="pixel-kicker">MINECRAFT VISUALS</span>
+          <h2>Không khí Minecraft.<br><span>Để website đúng chất game hơn.</span></h2>
+        </div>
+        <p>Các hình ảnh Minecraft được dùng làm phần trang trí để website có không khí game rõ hơn, không đại diện cho một gói dịch vụ khác.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card gallery-wide tilt-card">
+          <img src="./assets/images/forest.webp" alt="Minecraft magical forest banner">
+          <figcaption>
+            <span>MINECRAFT 01</span>
+            <b>Magical forest mood.</b>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card tilt-card">
+          <img src="./assets/images/cherry.webp" alt="Minecraft cherry blossom banner">
+          <figcaption>
+            <span>MINECRAFT 02</span>
+            <b>Cherry blossom world.</b>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card tilt-card">
+          <img src="./assets/images/sunrise.webp" alt="Minecraft sunrise pond banner">
+          <figcaption>
+            <span>MINECRAFT 03</span>
+            <b>Peaceful sunrise.</b>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="final-cta shell">
+      <div class="final-card">
+        <div class="final-bg">
+          <img src="./assets/images/sunrise.webp" alt="">
+        </div>
+        <div class="final-inner">
+          <span class="pixel-kicker">READY?</span>
+          <h2>Muốn có domain miễn phí<br>cho server của bạn?</h2>
+          <p>Vào Kotoba Studio, dùng <strong>/register</strong>, nhập thông tin server và tạo địa chỉ <strong>*.mc-vn.top</strong> của bạn.</p>
+          <a class="primary-btn magnetic shimmer" href="https://dsc.gg/k-studio" target="_blank" rel="noopener">
+            <span>Tạo tên miền miễn phí</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>Tạo ra miễn phí bởi <a href="https://dsc.gg/k-studio" target="_blank" rel="noopener">Kotoba Studio</a></span>
+    <button class="credits-link" id="openCredits" type="button">Nguồn hình ảnh & âm nhạc</button>
+    <span>mc-vn.top</span>
+  </footer>
+
+  <!-- CREDITS -->
+  <div class="credits-modal" id="creditsModal" aria-hidden="true">
+    <div class="credits-backdrop" data-close-credits></div>
+    <div class="credits-card">
+      <button class="credits-close" data-close-credits type="button">×</button>
+      <span class="pixel-kicker">CREDITS</span>
+      <h3>Nguồn hình ảnh & âm nhạc</h3>
+      <p>Website dùng các ảnh bạn gửi và playlist chiptune. Chi tiết đầy đủ nằm trong <code>CREDITS.md</code>.</p>
+
+      <div class="credit-list">
+        <div><b>WallsFlow</b><span>Minecraft peaceful sunrise by the pond</span></div>
+        <div><b>Discord CDN image</b><span>Minecraft magical forest village wallpaper</span></div>
+        <div><b>DeviantArt / Wixmp</b><span>Minecraft cherry blossom wallpaper</span></div>
+        <div><b>OpenGameArt</b><span>Chiptune playlist • CC0 tracks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <div>
+      <strong id="toastTitle">Đã sẵn sàng</strong>
+      <span id="toastText">Đang mở Kotoba Studio...</span>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
